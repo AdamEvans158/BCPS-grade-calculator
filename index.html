@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCPS Grade Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script type="module" src="js/index.js" defer></script>
+</head>
+<body>
+
+    <nav class="page-navigation">
+        <h1 class="page-title">BCPS FINAL GRADE CALCULATOR</h1>
+        <div class="links" hidden>
+            <a href="#" class="bcps-scale-link">BCPS Scale</a>
+            <a href="#" class="gpa-link">GPA</a>
+            <a href="#" class="calculators-link">Calculators</a>
+            <a href="#" class="credits-link">Credits</a>
+        </div>
+    </nav>
+
+    <div class="text-content">
+
+        <div class="content-group-1">
+            <div class="left-slide bcps-grading-scale-container">
+                <h2 class="about-bcps-grading-title">The BCPS Grading Scale</h2>
+                <p class="bcps-grading-scale">
+                    Baltimore County Public Schools or BCPS for short uses a standard 4.0 grading scale. But they also have a weighted scale with Honors, GT, AP, IB, and Duel Enrollment considerations. The weighted GPA is also called QPA (Quality Point Average), is on a 6.0 scale with GT, AP, IB, and Duel Enrollment courses being worth 6 and honors courses being worth 5.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-group-2">
+            <div class="right-slide gpa-container">
+                <h2 class="how-to-calculate-GPA-title">How to Calculate GPA</h2>
+                <p class="bcps-GPA-calculator-text">
+                    To calculate your unweighted GPA, you need to the point values for each letter. An <strong>A = 4</strong>, <strong>B = 3</strong>, <strong>C = 2</strong>, <strong>D = 1</strong>, and <strong>E = 0</strong>. Note that number percentages are not considered. Only the letter, and there are no + or - grades. To calculuate your GPA add all the letter values for each of your classes and divide by the total number of classes. Or if you want your GPA in a single class, Add all the letter values for each grading period and final exam and divide by the amount of marking periods + 1.
+                </p>
+            </div>
+
+            <div class="left-slide grade-table">
+                <table>
+                    <tr>
+                        <th class="GPA-column">GPA</th>
+                        
+                        <th class="letter-column">Letter</th>
+                    </tr>
+                    <tr>
+                        <td>3.5 - 4.0</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>2.5 - 3.4</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>1.5 - 2.4</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>0.5 - 1.4</td>
+                        <td>D</td>
+                    </tr>
+                    <tr>
+                        <td>0 - 0.4</td>
+                        <td>E</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="final-grade-calculator">
+        <h1 class="final-grade-calculator-title">Final Grade Calculator</h1>
+
+        <div class="users-values-container">
+            <div class="marking-period-1 marking-period">
+                <h4 class="marking-period-title">MP 1:</h4>
+                <select name="mp-1-selection" id="MP1Selection">
+                    <option value="4">A</option>
+                    <option value="3">B</option>
+                    <option value="2">C</option>
+                    <option value="1">D</option>
+                    <option value="0">E</option>
+                </select>
+            </div>
+            <div class="marking-period-2 marking-period">
+                <h4 class="marking-period-title">MP 2:</h4>
+                <select name="mp-2-selection" id="MP2Selection">
+                    <option value="4">A</option>
+                    <option value="3">B</option>
+                    <option value="2">C</option>
+                    <option value="1">D</option>
+                    <option value="0">E</option>
+                </select>
+            </div>
+            <div class="marking-period-3 marking-period">
+                <h4 class="marking-period-title">MP 3:</h4>
+                <select name="mp-3-selection" id="MP3Selection">
+                    <option value="4">A</option>
+                    <option value="3">B</option>
+                    <option value="2">C</option>
+                    <option value="1">D</option>
+                    <option value="0">E</option>
+                </select>
+            </div>
+            <div class="marking-period-4 marking-period">
+                <h4 class="marking-period-title">MP 4:</h4>
+                <select name="mp-4-selection" id="MP4Selection">
+                    <option value="4">A</option>
+                    <option value="3">B</option>
+                    <option value="2">C</option>
+                    <option value="1">D</option>
+                    <option value="0">E</option>
+                </select>
+            </div>
+            <div class="final-exam-container">
+                <h4 class="final-exam-title">Final Exam</h4>
+                <select name="final-exam-selection" id="finalExamSelection">
+                    <option value="4">A</option>
+                    <option value="3">B</option>
+                    <option value="2">C</option>
+                    <option value="1">D</option>
+                    <option value="0">E</option>
+                </select>
+            </div>
+        </div>
+        <button id="calculateFinalGradeBtn"class="calculate-final-grade-btn">Calculate</button>
+        <input type="text" name="final-grade-output" disabled id="finalGrade" placeholder="Final Grade" class="final-grade-output">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+*{
+    font-family: "Platypi";
+    color: var(--white-color);
+}
+
+body, html{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+:root{
+    --main-dark-color: #222831;
+    --secondary-dark-color: #31363F;
+    --lighter-dark-color: hsl(219, 13%, 25%);
+    --white-color: hsl(0, 0%, 83%);
+    --table-header-bg: hsl(216, 18%, 13%);
+    --table-border-color: hsl(216, 18%, 10%);
+    --sky-blue-color: #76ABAE;
+}
+
+body{
+    background-color: var(--main-dark-color);
+}
+
+.page-navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--table-border-color);
+    padding-inline: 10px
+}
+
+.page-title{
+    font-size: 1.3rem;
+}
+
+.links > a{
+    text-decoration: none;
+    background-image: linear-gradient(135deg, var(--secondary-dark-color), var(--main-dark-color), var(--secondary-dark-color));
+    background-size: 0px;
+    background-repeat: no-repeat;
+    transition: background-size 250ms;
+    margin-inline: 5px;
+    padding-inline: 7px;
+    border-radius: 15px;
+
+}
+
+.links > a:hover{
+    background-size: 100%;
+}
+
+.bcps-grading-scale-container, .gpa-container{
+    background-color: var(--lighter-dark-color);
+    box-shadow: 0px 0px 20px var(--table-border-color);
+    border: 2px solid var(--table-border-color);
+}
+
+.content-group-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+}
+
+.grade-table{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    gap: 100px;
+    background-color: var(--table-border-color);
+    box-shadow: 0px 0px 10px var(--table-border-color);
+}
+
+th{
+    background-color: var(--table-header-bg);
+}
+
+.GPA-column{
+    padding-inline: 30px;
+}
+
+.letter-column{
+    padding-inline: 20px;
+}
+
+td{
+    background-color: var(--secondary-dark-color);
+}
+
+tr{
+    text-align: center;
+}
+
+.text-content{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.final-exam-container, .marking-period{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 30px;
+    border-bottom: 2px solid var(--main-dark-color);
+}
+
+.users-values-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.final-grade-calculator{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    background-color: var(--secondary-dark-color);
+    max-width: 70%;
+    max-width: 500px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 3px solid var(--table-border-color);
+    box-shadow: 0px 0px 10px var(--table-border-color);
+}
+
+.marking-period-title{
+    width: fit-content;
+}
+
+.final-grade-calculator-title{
+    text-align: center;
+}
+
+select{
+    background-color: var(--main-dark-color);
+    max-width: 100px;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+
+.final-grade-output{
+    display: none;
+}
+
+.final-grade-output, .calculate-final-grade-btn{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    background-color: var(--main-dark-color);
+    width: 80%;
+    height: 35px;
+    text-align: center;
+    font-size: larger;
+    color: var(--white-color);
+}
+
+.calculate-final-grade-btn{
+    cursor: pointer;
+}
